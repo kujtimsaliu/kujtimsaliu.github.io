@@ -71,7 +71,7 @@
   height: 100px;
   background: url("../img/small_logo.jpg");
   border-radius: 50%;
-  border: solid 3px rgba(53, 185, 26, 0.808);
+  border: solid 3px #ee1a61;
 }
 .menu .nav-item {
   transform: translate3d(600px, 0, 0);
