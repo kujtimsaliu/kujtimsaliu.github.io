@@ -165,7 +165,7 @@ header {
 }
 
 .text-secondary {
-  color: #ee1a61;
+  color: #ffb3cc;
 }
 
 main {
@@ -255,7 +255,7 @@ main#home h1 {
   color: #000;
 }
 .boxes div:hover span {
-  color: #000;
+  color: rgb(255, 233, 233);
 }
 
 .btn,
@@ -270,7 +270,7 @@ main#home h1 {
 .btn-dark:hover,
 .btn-light:hover {
   background: #ee1a61;
-  color: #000;
+  color: rgb(255, 248, 248);
 }
 
 .btn-dark {
