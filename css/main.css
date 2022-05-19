@@ -367,3 +367,10 @@ main#home h1 {
   font-size: 4rem;
   color: #ee1a61;
 }
+.menu-branding .portrait{
+  width: 150px;
+  height: 150px;
+  background: url("../img/mobile_responsive.jpg");
+  border-radius: 50%;
+  border: solid 3px #ee1a61;
+}
