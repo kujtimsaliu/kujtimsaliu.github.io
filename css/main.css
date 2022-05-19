@@ -167,6 +167,10 @@ header {
 .text-secondary {
   color: #ee1a61;
 }
+.home_ss{
+  font-size: 5rem;
+  color:#ee1a61;
+}
 
 main {
   padding: 4rem;
@@ -361,10 +365,10 @@ main#home h1 {
   }
 }
 .text-secondary {
-  font-size: 28px;
+  /* font-size: 28px; */
 }
 .text-secondaryy{
-  font-size: 4rem;
+  font-size: 6rem;
   color: #ee1a61;
 }
 .menu-branding .portrait{
