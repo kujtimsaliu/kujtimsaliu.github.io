@@ -354,9 +354,16 @@ main#home h1 {
   }
   main .lg-heading {
     margin-top: 1rem;
-    font-size: 5rem;
+    font-size: 4rem;
   }
   .projects {
     grid-template-columns: 1fr;
   }
+}
+.text-secondary {
+  font-size: 28px;
+}
+.text-secondaryy{
+  font-size: 4rem;
+  color: #ee1a61;
 }
