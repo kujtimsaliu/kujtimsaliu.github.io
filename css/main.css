@@ -368,7 +368,7 @@ main#home h1 {
   /* font-size: 28px; */
 }
 .text-secondaryy{
-  font-size: 6rem;
+  font-size: 5rem;
   color: #ee1a61;
 }
 .menu-branding .portrait{
@@ -377,4 +377,7 @@ main#home h1 {
   background: url("../img/mobile_responsive.jpg");
   border-radius: 50%;
   border: solid 3px #ee1a61;
+}
+.home_ss{
+  font-size: 4rem;
 }
