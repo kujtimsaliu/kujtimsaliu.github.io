@@ -364,9 +364,7 @@ main#home h1 {
     grid-template-columns: 1fr;
   }
 }
-.text-secondary {
-  /* font-size: 28px; */
-}
+
 .text-secondaryy{
   font-size: 5rem;
   color: #ee1a61;
