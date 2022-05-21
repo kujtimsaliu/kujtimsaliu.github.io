@@ -358,11 +358,14 @@ main#home h1 {
   }
   main .lg-heading {
     margin-top: 1rem;
-    font-size: 4rem;
+    font-size: 5rem;
   }
   .projects {
     grid-template-columns: 1fr;
   }
+}
+.smheadingdiv{
+  margin:20px 0;
 }
 
 .text-secondaryy{
@@ -377,5 +380,5 @@ main#home h1 {
   border: solid 3px #ee1a61;
 }
 .home_ss{
-  font-size: 6rem;
+  font-size: 5rem;
 }
