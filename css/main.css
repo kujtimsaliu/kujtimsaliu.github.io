@@ -172,6 +172,7 @@ header {
   color:#ee1a61;
 }
 
+
 main {
   padding: 4rem;
   min-height: calc(100vh - 60px);
@@ -363,22 +364,23 @@ main#home h1 {
   .projects {
     grid-template-columns: 1fr;
   }
-}
-.smheadingdiv{
-  margin:20px 0;
-}
-
-.text-secondaryy{
-  font-size: 5rem;
-  color: #ee1a61;
-}
-.menu-branding .portrait{
-  width: 150px;
-  height: 150px;
-  background: url("../img/mobile_responsive.jpg");
-  border-radius: 50%;
-  border: solid 3px #ee1a61;
-}
-.home_ss{
-  font-size: 5rem;
+  .home_ss{
+    font-size: 5rem;
+  }
+  .smheadingdiv{
+    margin:20px 0;
+  }
+  
+  .text-secondaryy{
+    font-size: 5rem;
+    color: #ee1a61;
+  }
+  .menu-branding .portrait{
+    /* margin-top: 20px; */
+    width: 150px;
+    height: 150px;
+    background: url("../img/mobile_responsive.jpg");
+    border-radius: 50%;
+    border: solid 3px #ee1a61;
+  }
 }
