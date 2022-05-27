@@ -14,9 +14,9 @@
 
 <body id="bg-img">
   <header>
-    <img style="opacity: 0.99;height: 80px; border-radius: 50%;margin: 20px;margin-left: 30px;margin-top:20px;"
+    <img onmousedown="party.confetti(this)" style="opacity: 0.99;height: 80px; border-radius: 50%;margin: 20px;margin-left: 30px;margin-top:20px;"
       src="img/logo.jpg" alt="">
-    <div class="menu-btn">
+    <div class="menu-btn" onmousedown="party.confetti(this)">
       <div class="btn-line"></div>
       <div class="btn-line"></div>
       <div class="btn-line"></div>
@@ -56,7 +56,7 @@
       Kujtim
       <span class="home_ss">Saliu</span>
     </h1>
-    <div class="smheadingdiv">
+    <div class="smheadingdiv" onmousedown="party.confetti(this)">
 
       <h2 class="sm-heading">
         Student, Web Programmer, Graphic Designer!
@@ -84,7 +84,12 @@
     </div>
   </main>
 
+  <!-- <div class="button" onmousedown="party.confetti(this)">Click me!</div> -->
+
+
   <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
+
 </body>
 
 </html>

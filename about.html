@@ -14,7 +14,7 @@
 
 <body>
   <header>
-    <div class="menu-btn">
+    <div class="menu-btn" onmousedown="party.confetti(this)">
       <div class="btn-line"></div>
       <div class="btn-line"></div>
       <div class="btn-line"></div>
@@ -58,7 +58,7 @@
       Let me tell you a few things...
     </h2>
     <div class="about-info">
-      <img style="height: 200px; " src="img/img.jpg" alt="John Doe" class="bio-image">
+      <img  onmousedown="party.confetti(this)" style="height: 200px; " src="img/img.jpg" alt="John Doe" class="bio-image">
 
       <div class="bio">
         <h3 class="text-secondary">BIO</h3>
@@ -98,10 +98,10 @@
       </div>
 
       <!-- <iframe style="border-radius:12px; max-width: 800px;" src="https://open.spotify.com/embed/playlist/19rZxofc8dz3gHjsyFIQEf?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> -->
-      <iframe style="border-radius:12px;max-width: 800px;"
-        src="https://open.spotify.com/embed/playlist/5q7390bjGHwC8kBwuFXG5S?utm_source=generator" width="100%"
-        height="380" frameBorder="0" allowfullscreen=""
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+      
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2CBcnnphrbwF0bXZOnh8Qz?utm_source=generator" width="100%" 
+      height="380" frameBorder="0" allowfullscreen="" 
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
     </div>
 
   </main>
@@ -111,6 +111,8 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
+
 </body>
 
 </html>

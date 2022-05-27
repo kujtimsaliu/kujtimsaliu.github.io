@@ -14,7 +14,7 @@
 
 <body>
   <header>
-    <div class="menu-btn">
+    <div class="menu-btn" onmousedown="party.confetti(this)">
       <div class="btn-line"></div>
       <div class="btn-line"></div>
       <div class="btn-line"></div>
@@ -58,7 +58,7 @@
       This is how you can reach me...
     </h2>
     <div class="boxes">
-      <div>
+      <div onmousedown="party.confetti(any)">
         <span class="text-secondary">Email: </span>
          kujtimsaliu011@gmail.com
       </div>
@@ -78,6 +78,8 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
+
 </body>
 
 </html>
