@@ -1,0 +1,11 @@
+#globe-container {
+    width: 100px;
+    height: 100px; /* Adjust the height as needed */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}

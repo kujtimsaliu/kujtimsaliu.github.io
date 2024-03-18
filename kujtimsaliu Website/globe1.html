@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive 3D Glober</title>
+    <style>
+        body { margin: 0; overflow: hidden; }
+        canvas { display: block; }
+        #globe-container {
+            position: relative;
+            width: 100%;
+            height: calc(100vh - 200px); /* Adjust the height as needed */
+            overflow: hidden;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="globe-containter">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        // Set up scene, camera, and renderer
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ alpha: true }); // Set alpha to true for a transparent background
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        // Create a sphere (the globe) with higher resolution
+        const geometry = new THREE.SphereGeometry(1, 64, 64); // Increased segments for smoother appearance
+        const textureLoader = new THREE.TextureLoader();
+        const texture = textureLoader.load('texture1.jpg'); // Use a higher quality texture image
+        const material = new THREE.MeshBasicMaterial({ map: texture, transparent: true }); // Set transparent to true
+        const globe = new THREE.Mesh(geometry, material);
+        scene.add(globe);
+
+        // Set camera position
+        camera.position.z = 2;
+
+        // Create a green circular dot marker for Macedonia's location
+        const markerGeometry = new THREE.CircleBufferGeometry(0.03, 32); // Increase the number of segments
+        const markerMaterial = new THREE.MeshBasicMaterial({ color: 0x00FF00, transparent: true }); // Green color and transparent
+        const macedoniaMarker = new THREE.Mesh(markerGeometry, markerMaterial);
+        // Set the marker's position based on Macedonia's coordinates
+        macedoniaMarker.position.set(21.4280, 41.9973, 1.1); // Increase the z position to bring it in front of the globe
+        scene.add(macedoniaMarker);
+
+        // Define variables for mouse/touch interaction
+        let isDragging = false;
+        let previousMousePosition = { x: 0, y: 0 };
+        let targetRotation = { x: 0, y: 0 };
+
+        // Add mouse event listeners
+        renderer.domElement.addEventListener('mousedown', (event) => {
+            isDragging = true;
+            previousMousePosition = {
+                x: event.clientX,
+                y: event.clientY
+            };
+        });
+
+        renderer.domElement.addEventListener('mousemove', (event) => {
+            if (!isDragging) return;
+
+            const deltaMove = {
+                x: event.clientX - previousMousePosition.x,
+                y: event.clientY - previousMousePosition.y
+            };
+
+            const rotationSpeed = 0.005; // Adjust the speed of rotation
+
+            targetRotation.x += deltaMove.y * rotationSpeed;
+            targetRotation.y += deltaMove.x * rotationSpeed;
+
+            previousMousePosition = {
+                x: event.clientX,
+                y: event.clientY
+            };
+        });
+
+        renderer.domElement.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+
+        // Add touch event listeners
+        let touchStart = { x: 0, y: 0 };
+        let touchEnd = { x: 0, y: 0 };
+
+        renderer.domElement.addEventListener('touchstart', (event) => {
+            const touch = event.touches[0];
+            touchStart.x = touch.clientX;
+            touchStart.y = touch.clientY;
+        });
+
+        renderer.domElement.addEventListener('touchmove', (event) => {
+            const touch = event.touches[0];
+            touchEnd.x = touch.clientX;
+            touchEnd.y = touch.clientY;
+
+            const deltaMove = {
+                x: touchEnd.x - touchStart.x,
+                y: touchEnd.y - touchStart.y
+            };
+
+            const rotationSpeed = 0.005; // Adjust the speed of rotation
+
+            targetRotation.x += deltaMove.y * rotationSpeed;
+            targetRotation.y += deltaMove.x * rotationSpeed;
+
+            touchStart.x = touchEnd.x;
+            touchStart.y = touchEnd.y;
+
+            event.preventDefault();
+        });
+
+        // Easing function to smoothly stop rotation
+        function easeOut(current, target, factor) {
+            return current + (target - current) * factor;
+        }
+
+        // Render loop
+        function animate() {
+            requestAnimationFrame(animate);
+
+            // Apply easing to the rotation
+            globe.rotation.x = easeOut(globe.rotation.x, targetRotation.x, 0.05);
+            globe.rotation.y = easeOut(globe.rotation.y, targetRotation.y, 0.05);
+
+            renderer.render(scene, camera);
+        }
+        animate();
+    </script>
+    </div>
+
+</body>
+</html>
