@@ -334,13 +334,6 @@ img,video {
     }
 }
 
-#globe-container {
-    width: 100px;
-    height: 100px; /* Adjust the height as needed */
-}
-
-
-
 .sr-only {
     position: absolute;
     width: 1px;
@@ -1852,3 +1845,10 @@ img,video {
     }
 
     .lg\:cursor-\[url\(\'\/images\/koroks\/Elma\.png\'\)\2c _pointer\]{cursor:url(/images/koroks/Elma.png),pointer}.lg\:scroll-mt-24{scroll-margin-top:6rem}.lg\:flex-col{flex-direction:column}.lg\:justify-between{justify-content:space-between}.lg\:gap-4{gap:1rem}.lg\:px-0{padding-left:0;padding-right:0}.lg\:px-24{padding-left:6rem;padding-right:6rem}.lg\:py-0{padding-top:0;padding-bottom:0}.lg\:py-24{padding-top:6rem;padding-bottom:6rem}.lg\:text-4xl{font-size:2.25rem;line-height:2.5rem}.lg\:font-medium{font-weight:500}.lg\:text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240/var(--tw-text-opacity))}.lg\:opacity-0{opacity:0}.lg\:hover\:\!opacity-100:hover{opacity:1!important}.group:hover .lg\:group-hover\:bg-slate-800\/50{background-color:rgba(30,41,59,.5)}.group\/list:hover .lg\:group-hover\/list\:opacity-50{opacity:.5}.group:hover .lg\:group-hover\:shadow-\[inset_0_1px_0_0_rgba\(148\2c 163\2c 184\2c 0\.1\)\]{--tw-shadow:inset 0 1px 0 0 rgba(148,163,184,.1);--tw-shadow-colored:inset 0 1px 0 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.group:hover .lg\:group-hover\:drop-shadow-lg{--tw-drop-shadow:drop-shadow(0 10px 8px rgba(0,0,0,.04)) drop-shadow(0 4px 3px rgba(0,0,0,.1));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}}@font-face{font-family:__inter_20b187;src:url(/_next/static/media/730e8169368baf37-s.p.woff2) format("woff2");font-display:swap}@font-face{font-family:__inter_20b187;src:url(/_next/static/media/f1f0c35b32161446-s.p.woff2) format("woff2");font-display:swap;font-weight:400;font-style:normal}@font-face{font-family:__inter_20b187;src:url(/_next/static/media/d593a8df799d4ab1-s.p.woff2) format("woff2");font-display:swap;font-weight:400;font-style:italic}@font-face{font-family:__inter_20b187;src:url(/_next/static/media/dc792b508e6f91c7-s.p.woff2) format("woff2");font-display:swap;font-weight:500;font-style:normal}@font-face{font-family:__inter_20b187;src:url(/_next/static/media/84d3493a9fd22f1c-s.p.woff2) format("woff2");font-display:swap;font-weight:500;font-style:italic}@font-face{font-family:__inter_20b187;src:url(/_next/static/media/fcb100c7607696fd-s.p.woff2) format("woff2");font-display:swap;font-weight:600;font-style:normal}@font-face{font-family:__inter_20b187;src:url(/_next/static/media/d90f295d0c348006-s.p.woff2) format("woff2");font-display:swap;font-weight:600;font-style:italic}@font-face{font-family:__inter_20b187;src:url(/_next/static/media/579e0f95cacfae57-s.p.woff2) format("woff2");font-display:swap;font-weight:700;font-style:normal}@font-face{font-family:__inter_20b187;src:url(/_next/static/media/828a494e04a45cbd-s.p.woff2) format("woff2");font-display:swap;font-weight:700;font-style:italic}@font-face{font-family:__inter_Fallback_20b187;src:local("Arial");ascent-override:90.00%;descent-override:22.43%;line-gap-override:0.00%;size-adjust:107.64%}.__className_20b187{font-family:__inter_20b187,__inter_Fallback_20b187}.__variable_20b187{--font-inter:"__inter_20b187","__inter_Fallback_20b187"}
+
+/* The original Next.js self-hosted Inter files were never exported with the
+   site, so __inter_20b187 silently fell back to Arial. Point the font variable
+   at the Google Fonts Inter loaded from index.html instead. */
+.__variable_20b187 {
+    --font-inter: "Inter";
+}
